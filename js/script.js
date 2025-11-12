@@ -26,6 +26,10 @@ ouT.addEventListener("click", () => {
   secPage.setAttribute("hidden", true);
   phnNum.value = "";
   pasSw.value = "";
+  welPart.removeAttribute("hidden");
+  defPart.removeAttribute("hidden");
+  addBtn.style.color = "";
+  addBtn.style.background = "";
 });
 
 // ===============================================
@@ -40,7 +44,27 @@ addBtn.addEventListener("click", () => {
   defPart.setAttribute("hidden", true);
   addMon.removeAttribute("hidden");
 
-  //   addBtn.style.border.background = "#0874F2";
+  addBtn.style.border = "2px solid #0874F2";
   addBtn.style.color = "#0874F2";
   addBtn.style.background = "#f3f8fe";
+});
+
+// ===========================================
+
+let accNum = document.getElementById("accNum");
+let amountSend = document.getElementById("amountSend");
+let pinNum = document.getElementById("pinNum");
+let addMonBtn = document.getElementById("addMonBtn");
+let totalAmount = document.getElementById("totalAmount");
+
+addMonBtn.addEventListener("click", () => {
+  let amountTotal = parseInt(totalAmount.innerText);
+  let sendAmount = parseInt(amountSend.value);
+
+  if (pinNum.value === "1234") {
+    let toale = amountTotal + sendAmount;
+    totalAmount.innerText = toale;
+    amountSend.value = "";
+    pinNum.value = "";
+  }
 });

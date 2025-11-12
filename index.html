@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="src/output.css" />
   </head>
+
   <body class="font-desi">
     <!-- Home Page Start -->
     <div class="text-center mt-10" id="homE">
@@ -66,7 +67,7 @@
     <!-- Home Page End -->
 
     <!-- First Page Start -->
-    <div class="text-center mt-10" id="secPage" hidden>
+    <div class="text-center mt-10" id="secPage">
       <!-- Phone Start -->
       <div class="mockup-phone">
         <div class="mockup-phone-camera"></div>
@@ -91,7 +92,9 @@
               <div class="flex">
                 <img src="images/Group.png" alt="" />
                 <div class="pl-2">
-                  <h3 class="text-start font-bold text-[18px]">$45000</h3>
+                  <h3 class="text-start font-bold text-[18px]">
+                    $<span id="totalAmount">45000</span>
+                  </h3>
                   <p class="text-[#080808]/50">Available Balance</p>
                 </div>
               </div>
@@ -312,36 +315,39 @@
                   class="label text-[#080808]/70 w-[340px] py-2 font-semibold"
                   >Bank Account Number</label
                 >
+
                 <input
                   type="text"
                   class="input outline-0 bg-[#F4F5F7] text-[#080808] px-5 rounded-4xl py-6 w-[350px]"
-                  id="pasSw"
+                  id="accNum"
                   placeholder="Enter 11 digit account number"
                 />
                 <label
                   class="label text-[#080808]/70 w-[340px] py-2 font-semibold"
                   >Amount to Add</label
                 >
+
                 <input
-                  type="text"
+                  type="number"
                   class="input outline-0 bg-[#F4F5F7] text-[#080808] px-5 rounded-4xl py-6 w-[350px]"
-                  id=""
+                  id="amountSend"
                   placeholder="Add Amount to withdraw"
                 />
                 <label
                   class="label text-[#080808]/70 w-[340px] py-2 font-semibold"
                   >Pin Number</label
                 >
+
                 <input
                   type="password"
                   class="input outline-0 bg-[#F4F5F7] text-[#080808] px-5 rounded-4xl py-6 w-[350px]"
-                  id=""
+                  id="pinNum"
                   placeholder="Enter 4 digit pin number"
                 />
 
                 <button
                   class="btn shadow-none mt-5 mb-2 border-0 text-xl bg-[#0874F2] text-[#ffffff] rounded-4xl w-[350px] py-7"
-                  id=""
+                  id="addMonBtn"
                 >
                   Add Money
                 </button>
