@@ -13,7 +13,6 @@
     />
     <!-- Google fonts -->
     <link rel="stylesheet" href="src/all.min.css" />
-    <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="src/output.css" />
   </head>
 
@@ -115,7 +114,7 @@
           <!-- 1st part -->
           <div class="bg-white rounded-bl-2xl rounded-br-2xl p-6">
             <!-- 2nd part -->
-            <div class="pb-6" id="welPart">
+            <div class="pb-6" id="welPart" hidden>
               <h1 class="font-bold text-[24px] text-start text-black pb-3">
                 🔥 Welcome to Payooo!
               </h1>
@@ -137,12 +136,14 @@
                 <p>Add Money</p>
               </div>
               <div
+                id="cashOutPage"
                 class="w-[31%] border px-6 py-5 rounded-2xl border-[#080808]/10 text-[#080808]/70 text-[14px] cursor-pointer"
               >
                 <img src="images/send 1.png" alt="" class="mx-auto pb-2" />
                 <p>Cashout</p>
               </div>
               <div
+                id="traMoneyPage"
                 class="w-[31%] border px-1 py-5 rounded-2xl border-[#080808]/10 text-[#080808]/70 text-[14px] cursor-pointer"
               >
                 <img src="images/money 1.png" alt="" class="mx-auto pb-2" />
@@ -151,18 +152,21 @@
             </div>
             <div class="flex justify-between mt-4">
               <div
+                id="cupon"
                 class="w-[31%] border px-6 py-5 rounded-2xl border-[#080808]/10 text-[#080808]/70 text-[14px] cursor-pointer"
               >
                 <img src="images/financial 1.png" alt="" class="mx-auto pb-2" />
                 <p>Get Bonus</p>
               </div>
               <div
+                id="billPage"
                 class="w-[31%] border px-6 py-5 rounded-2xl border-[#080808]/10 text-[#080808]/70 text-[14px] cursor-pointer"
               >
                 <img src="images/purse 1.png" alt="" class="mx-auto pb-2" />
                 <p>Pay Bill</p>
               </div>
               <div
+                id="tranPage"
                 class="w-[31%] border px-6 py-5 rounded-2xl border-[#080808]/10 text-[#080808]/70 text-[14px] cursor-pointer"
               >
                 <img
@@ -176,7 +180,7 @@
             <!-- 3rd part -->
           </div>
           <!-- 4th part -->
-          <div class="pt-6 px-6" id="defPart">
+          <div class="pt-6 px-6" id="defPart" hidden>
             <!-- Latest -->
             <div class="flex justify-between pb-4">
               <div class="text-[18px] font-semibold text-[#080808]/90">
@@ -356,6 +360,344 @@
             <!-- Items -->
           </div>
           <!-- 4th part Two -->
+          <!-- 4th part Three -->
+          <div class="pt-7 px-7" id="cashOut" hidden>
+            <!-- Latest -->
+            <div class="pb-3">
+              <div
+                class="text-[18px] font-semibold text-[#080808]/90 text-start"
+              >
+                Cash Out
+              </div>
+            </div>
+            <!-- Latest -->
+            <!-- Items -->
+            <div class="bg-white rounded-3xl p-5">
+              <div class="">
+                <label
+                  class="label text-[#080808]/70 w-[340px] py-2 font-semibold"
+                  >Agent Number</label
+                >
+
+                <input
+                  type="text"
+                  class="input outline-0 bg-[#F4F5F7] text-[#080808] px-5 rounded-4xl py-6 w-[350px]"
+                  id="agentNum"
+                  placeholder="Enter 11 digit number"
+                />
+                <label
+                  class="label text-[#080808]/70 w-[340px] py-2 font-semibold"
+                  >Amount</label
+                >
+
+                <input
+                  type="number"
+                  class="input outline-0 bg-[#F4F5F7] text-[#080808] px-5 rounded-4xl py-6 w-[350px]"
+                  id="cashAmount"
+                  placeholder="Enter amount to withdraw"
+                />
+                <label
+                  class="label text-[#080808]/70 w-[340px] py-2 font-semibold"
+                  >Pin Number</label
+                >
+
+                <input
+                  type="password"
+                  class="input outline-0 bg-[#F4F5F7] text-[#080808] px-5 rounded-4xl py-6 w-[350px]"
+                  id="pasNum"
+                  placeholder="Enter 4 digit pin number"
+                />
+
+                <button
+                  class="btn shadow-none mt-7 mb-2 border-0 text-xl bg-[#0874F2] text-[#ffffff] rounded-4xl w-[350px] py-7"
+                  id="cashBtn"
+                >
+                  Withdraw Money
+                </button>
+              </div>
+            </div>
+            <!-- Items -->
+          </div>
+          <!-- 4th part Three -->
+          <!-- 4th part Four -->
+          <div class="pt-7 px-7" id="transfer" hidden>
+            <!-- Latest -->
+            <div class="pb-3">
+              <div
+                class="text-[18px] font-semibold text-[#080808]/90 text-start"
+              >
+                Transfer Money
+              </div>
+            </div>
+            <!-- Latest -->
+            <!-- Items -->
+            <div class="bg-white rounded-3xl p-5">
+              <div class="">
+                <label
+                  class="label text-[#080808]/70 w-[340px] py-2 font-semibold"
+                  >User Account Number</label
+                >
+
+                <input
+                  type="text"
+                  class="input outline-0 bg-[#F4F5F7] text-[#080808] px-5 rounded-4xl py-6 w-[350px]"
+                  id="tAgentNum"
+                  placeholder="Enter 11 digit number"
+                />
+                <label
+                  class="label text-[#080808]/70 w-[340px] py-2 font-semibold"
+                  >Amount</label
+                >
+
+                <input
+                  type="number"
+                  class="input outline-0 bg-[#F4F5F7] text-[#080808] px-5 rounded-4xl py-6 w-[350px]"
+                  id="tCashAm"
+                  placeholder="Enter amount to transfer"
+                />
+                <label
+                  class="label text-[#080808]/70 w-[340px] py-2 font-semibold"
+                  >Pin Number</label
+                >
+
+                <input
+                  type="password"
+                  class="input outline-0 bg-[#F4F5F7] text-[#080808] px-5 rounded-4xl py-6 w-[350px]"
+                  id="tPass"
+                  placeholder="Enter 4 digit pin number"
+                />
+
+                <button
+                  class="btn shadow-none mt-7 mb-2 border-0 text-xl bg-[#0874F2] text-[#ffffff] rounded-4xl w-[350px] py-7"
+                  id="sendBtn"
+                >
+                  Send Now
+                </button>
+              </div>
+            </div>
+            <!-- Items -->
+          </div>
+          <!-- 4th part Four -->
+          <!-- 4th part Five -->
+          <div class="pt-7 px-7" id="cuponPage" hidden>
+            <!-- Latest -->
+            <div class="pb-3">
+              <div
+                class="text-[18px] font-semibold text-[#080808]/90 text-start"
+              >
+                Get Bonus
+              </div>
+            </div>
+            <!-- Latest -->
+            <!-- Items -->
+            <div class="bg-white rounded-3xl p-5">
+              <div class="">
+                <label
+                  class="label text-[#080808]/70 w-[340px] py-2 font-semibold"
+                  >Enter Bonus Coupon</label
+                >
+
+                <input
+                  type="text"
+                  class="input outline-0 bg-[#F4F5F7] text-[#080808] px-5 rounded-4xl py-6 w-[350px]"
+                  id="cuponNum"
+                  placeholder="Enter your coupon"
+                />
+
+                <button
+                  class="btn shadow-none mt-7 mb-2 border-0 text-xl bg-[#0874F2] text-[#ffffff] rounded-4xl w-[350px] py-7"
+                  id="cuponbtn"
+                >
+                  Get Bonus
+                </button>
+              </div>
+            </div>
+            <!-- Items -->
+          </div>
+          <!-- 4th part Five -->
+          <!-- 4th part Six -->
+          <div class="pt-3 px-6" id="payBill" hidden>
+            <!-- Latest -->
+            <div class="pb-3">
+              <div
+                class="text-[18px] font-semibold text-[#080808]/90 text-start"
+              >
+                Pay Bill
+              </div>
+            </div>
+            <!-- Latest -->
+            <!-- Items -->
+            <div class="bg-white rounded-3xl px-6 py-4">
+              <div class="">
+                <label
+                  class="label text-[#080808]/70 w-[340px] py-2 font-semibold"
+                  >Select To Pay</label
+                >
+
+                <select
+                  class="bg-[#F4F5F7] border-none px-5 py-3.5 w-[350px] rounded-4xl font-light text-[#080808] outline-none"
+                >
+                  <option class="text-black" disabled selected>
+                    Select back
+                  </option>
+                  <option>IFIC</option>
+                  <option>City Bank</option>
+                  <option>Brac Bank</option>
+                  <option>Al Arafah Islami Bank</option>
+                  <option>Basic Bank</option>
+                </select>
+
+                <label
+                  class="label text-[#080808]/70 w-[340px] py-2 font-semibold"
+                  >Biller Account Number</label
+                >
+
+                <input
+                  type="text"
+                  class="input outline-0 bg-[#F4F5F7] text-[#080808] px-5 rounded-4xl py-6 w-[350px]"
+                  id="billNum"
+                  placeholder="Enter account number"
+                />
+                <label
+                  class="label text-[#080808]/70 w-[340px] py-2 font-semibold"
+                  >Amount to Pay</label
+                >
+
+                <input
+                  type="number"
+                  class="input outline-0 bg-[#F4F5F7] text-[#080808] px-5 rounded-4xl py-6 w-[350px]"
+                  id="billAmo"
+                  placeholder="Add Amount to pay"
+                />
+                <label
+                  class="label text-[#080808]/70 w-[340px] py-2 font-semibold"
+                  >Pin Number</label
+                >
+
+                <input
+                  type="password"
+                  class="input outline-0 bg-[#F4F5F7] text-[#080808] px-5 rounded-4xl py-6 w-[350px]"
+                  id="billpin"
+                  placeholder="Enter 4 digit pin number"
+                />
+
+                <button
+                  class="btn shadow-none mt-5 mb-2 border-0 text-xl bg-[#0874F2] text-[#ffffff] rounded-4xl w-[350px] py-7"
+                  id="payBtn"
+                >
+                  Pay Now
+                </button>
+              </div>
+            </div>
+            <!-- Items -->
+          </div>
+          <!-- 4th part Six -->
+          <!-- 4th part Seven-->
+          <div class="pt-6 px-6" id="transaction">
+            <!-- Latest -->
+            <div class="flex justify-between pb-4">
+              <div class="text-[18px] font-semibold text-[#080808]/90">
+                Transaction History
+              </div>
+              <div class="text-[14px] text-[#080808]/50 cursor-pointer">
+                View All
+              </div>
+            </div>
+            <!-- Latest -->
+            <!-- Items -->
+            <div
+              class="bg-white border border-[#080808]/10 rounded-xl px-4 py-3 mb-3.5"
+            >
+              <div class="flex justify-between items-center">
+                <div class="flex">
+                  <img src="images/Dwallet 2.png" alt="" />
+                  <div class="pl-3">
+                    <h4
+                      class="text-[#080808]/70 font-semibold text-4 text-start"
+                    >
+                      Electricity Bill
+                    </h4>
+                    <p class="text-[#080808]/70 text-3">Today 01:44 AM</p>
+                  </div>
+                </div>
+                <div class="">
+                  <i
+                    class="fa-solid fa-ellipsis-vertical cursor-pointer text-[#080808]/70 text-2xl"
+                  ></i>
+                </div>
+              </div>
+            </div>
+            <div
+              class="bg-white border border-[#080808]/10 rounded-xl px-4 py-3 mb-3.5"
+            >
+              <div class="flex justify-between items-center">
+                <div class="flex">
+                  <img src="images/Dwallet 2.png" alt="" />
+                  <div class="pl-3">
+                    <h4
+                      class="text-[#080808]/70 font-semibold text-4 text-start"
+                    >
+                      Bank Deposit
+                    </h4>
+                    <p class="text-[#080808]/70 text-3">Today 01:44 AM</p>
+                  </div>
+                </div>
+                <div class="">
+                  <i
+                    class="fa-solid fa-ellipsis-vertical cursor-pointer text-[#080808]/70 text-2xl"
+                  ></i>
+                </div>
+              </div>
+            </div>
+            <div
+              class="bg-white border border-[#080808]/10 rounded-xl px-4 py-3 mb-3.5"
+            >
+              <div class="flex justify-between items-center">
+                <div class="flex">
+                  <img src="images/Dwallet 2.png" alt="" />
+                  <div class="pl-3">
+                    <h4
+                      class="text-[#080808]/70 font-semibold text-4 text-start"
+                    >
+                      Mobile Recharge
+                    </h4>
+                    <p class="text-[#080808]/70 text-3 text-start">
+                      Today 01:44 AM
+                    </p>
+                  </div>
+                </div>
+                <div class="">
+                  <i
+                    class="fa-solid fa-ellipsis-vertical cursor-pointer text-[#080808]/70 text-2xl"
+                  ></i>
+                </div>
+              </div>
+            </div>
+            <div
+              class="bg-white border border-[#080808]/10 rounded-xl px-4 py-3 mb-3.5"
+            >
+              <div class="flex justify-between items-center">
+                <div class="flex">
+                  <img src="images/Dwallet 2.png" alt="" />
+                  <div class="pl-3">
+                    <h4
+                      class="text-[#080808]/70 font-semibold text-4 text-start"
+                    >
+                      Gas Bill
+                    </h4>
+                    <p class="text-[#080808]/70 text-3">Today 01:44 AM</p>
+                  </div>
+                </div>
+                <div class="">
+                  <i
+                    class="fa-solid fa-ellipsis-vertical cursor-pointer text-[#080808]/70 text-2xl"
+                  ></i>
+                </div>
+              </div>
+            </div>
+            <!-- Items -->
+          </div>
+          <!-- 4th part Seven-->
         </div>
       </div>
       <!-- Phone End -->
