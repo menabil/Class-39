@@ -15,12 +15,16 @@ logIn.addEventListener("click", () => {
     alert("Login Successful");
     secPage.removeAttribute("hidden");
     homE.setAttribute("hidden", true);
+  } else if (phone == "") {
+    alert("Please Give Phone Number");
+  } else if (pas == "") {
+    alert("Please Give Pin Number");
   } else {
     alert("Wrong Information");
   }
+  phnNum.value = "";
+  pasSw.value = "";
 });
-phnNum.value = "";
-pasSw.value = "";
 
 // Log out btn process
 ouT.addEventListener("click", () => {
@@ -50,11 +54,36 @@ let totalAmount = document.getElementById("totalAmount");
 addBtn.addEventListener("click", () => {
   welPart.setAttribute("hidden", true);
   defPart.setAttribute("hidden", true);
+  cashOut.setAttribute("hidden", true);
+  transfer.setAttribute("hidden", true);
+  cuponPage.setAttribute("hidden", true);
+  payBill.setAttribute("hidden", true);
+  transaction.setAttribute("hidden", true);
   addMon.removeAttribute("hidden");
 
   addBtn.style.border = "1px solid #0874F2";
   addBtn.style.color = "#0874F2";
   addBtn.style.background = "#f3f8fe";
+
+  tranPage.style.border = "";
+  tranPage.style.color = "";
+  tranPage.style.background = "";
+
+  billPage.style.border = "";
+  billPage.style.color = "";
+  billPage.style.background = "";
+
+  cupon.style.border = "";
+  cupon.style.color = "";
+  cupon.style.background = "";
+
+  traMoneyPage.style.border = "";
+  traMoneyPage.style.color = "";
+  traMoneyPage.style.background = "";
+
+  cashOutPage.style.border = "";
+  cashOutPage.style.color = "";
+  cashOutPage.style.background = "";
 });
 
 // addmoney process
@@ -65,6 +94,10 @@ addMonBtn.addEventListener("click", () => {
   if (pinNum.value === "1234") {
     let total = amountTotal + sendAmount;
     totalAmount.innerText = total;
+  } else if (pinNum.value == "") {
+    alert("Please Give Pin Number");
+  } else {
+    alert("Wrong Information");
   }
   amountSend.value = "";
   pinNum.value = "";
@@ -85,11 +118,35 @@ cashOutPage.addEventListener("click", () => {
   welPart.setAttribute("hidden", true);
   defPart.setAttribute("hidden", true);
   addMon.setAttribute("hidden", true);
+  transfer.setAttribute("hidden", true);
+  cuponPage.setAttribute("hidden", true);
+  payBill.setAttribute("hidden", true);
+  transaction.setAttribute("hidden", true);
   cashOut.removeAttribute("hidden");
 
   cashOutPage.style.border = "1px solid #0874F2";
   cashOutPage.style.color = "#0874F2";
   cashOutPage.style.background = "#f3f8fe";
+
+  tranPage.style.border = "";
+  tranPage.style.color = "";
+  tranPage.style.background = "";
+
+  billPage.style.border = "";
+  billPage.style.color = "";
+  billPage.style.background = "";
+
+  cupon.style.border = "";
+  cupon.style.color = "";
+  cupon.style.background = "";
+
+  traMoneyPage.style.border = "";
+  traMoneyPage.style.color = "";
+  traMoneyPage.style.background = "";
+
+  addBtn.style.border = "";
+  addBtn.style.color = "";
+  addBtn.style.background = "";
 });
 
 // cashout processing
@@ -100,6 +157,10 @@ cashBtn.addEventListener("click", () => {
   if (pasNum.value === "1234") {
     let total = amountTotal - sendAmount;
     totalAmount.innerText = total;
+  } else if (pasNum.value == "") {
+    alert("Please Give Pin Number");
+  } else {
+    alert("Wrong Information");
   }
   cashAmount.value = "";
   pasNum.value = "";
@@ -121,11 +182,34 @@ traMoneyPage.addEventListener("click", () => {
   defPart.setAttribute("hidden", true);
   addMon.setAttribute("hidden", true);
   cashOut.setAttribute("hidden", true);
+  cuponPage.setAttribute("hidden", true);
+  payBill.setAttribute("hidden", true);
+  transaction.setAttribute("hidden", true);
   transfer.removeAttribute("hidden");
 
   traMoneyPage.style.border = "1px solid #0874F2";
   traMoneyPage.style.color = "#0874F2";
   traMoneyPage.style.background = "#f3f8fe";
+
+  tranPage.style.border = "";
+  tranPage.style.color = "";
+  tranPage.style.background = "";
+
+  billPage.style.border = "";
+  billPage.style.color = "";
+  billPage.style.background = "";
+
+  cupon.style.border = "";
+  cupon.style.color = "";
+  cupon.style.background = "";
+
+  cashOutPage.style.border = "";
+  cashOutPage.style.color = "";
+  cashOutPage.style.background = "";
+
+  addBtn.style.border = "";
+  addBtn.style.color = "";
+  addBtn.style.background = "";
 });
 
 // Transfer processing
@@ -136,6 +220,10 @@ sendBtn.addEventListener("click", () => {
   if (tPass.value === "1234") {
     let total = amountTotal - sendAmount;
     totalAmount.innerText = total;
+  } else if (tPass.value == "") {
+    alert("Please Give Pin Number");
+  } else {
+    alert("Wrong Information");
   }
   tCashAm.value = "";
   tPass.value = "";
@@ -156,11 +244,33 @@ cupon.addEventListener("click", () => {
   addMon.setAttribute("hidden", true);
   cashOut.setAttribute("hidden", true);
   transfer.setAttribute("hidden", true);
+  payBill.setAttribute("hidden", true);
+  transaction.setAttribute("hidden", true);
   cuponPage.removeAttribute("hidden");
 
   cupon.style.border = "1px solid #0874F2";
   cupon.style.color = "#0874F2";
   cupon.style.background = "#f3f8fe";
+
+  tranPage.style.border = "";
+  tranPage.style.color = "";
+  tranPage.style.background = "";
+
+  billPage.style.border = "";
+  billPage.style.color = "";
+  billPage.style.background = "";
+
+  traMoneyPage.style.border = "";
+  traMoneyPage.style.color = "";
+  traMoneyPage.style.background = "";
+
+  cashOutPage.style.border = "";
+  cashOutPage.style.color = "";
+  cashOutPage.style.background = "";
+
+  addBtn.style.border = "";
+  addBtn.style.color = "";
+  addBtn.style.background = "";
 });
 
 // Cupon processing
@@ -170,6 +280,10 @@ cuponbtn.addEventListener("click", () => {
   if (cuponNum.value === "1234") {
     let total = amountTotal + 500;
     totalAmount.innerText = total;
+  } else if (cuponNum.value == "") {
+    alert("Please Give Pin Number");
+  } else {
+    alert("Wrong Information");
   }
 
   cuponNum.value = "";
@@ -192,14 +306,35 @@ billPage.addEventListener("click", () => {
   cashOut.setAttribute("hidden", true);
   transfer.setAttribute("hidden", true);
   cuponPage.setAttribute("hidden", true);
+  transaction.setAttribute("hidden", true);
   payBill.removeAttribute("hidden");
 
   billPage.style.border = "1px solid #0874F2";
   billPage.style.color = "#0874F2";
   billPage.style.background = "#f3f8fe";
+
+  tranPage.style.border = "";
+  tranPage.style.color = "";
+  tranPage.style.background = "";
+
+  cupon.style.border = "";
+  cupon.style.color = "";
+  cupon.style.background = "";
+
+  traMoneyPage.style.border = "";
+  traMoneyPage.style.color = "";
+  traMoneyPage.style.background = "";
+
+  cashOutPage.style.border = "";
+  cashOutPage.style.color = "";
+  cashOutPage.style.background = "";
+
+  addBtn.style.border = "";
+  addBtn.style.color = "";
+  addBtn.style.background = "";
 });
 
-// addmoney process
+// Pay bill process
 payBtn.addEventListener("click", () => {
   let amountTotal = parseInt(totalAmount.innerText);
   let sendAmount = parseInt(billAmo.value);
@@ -207,7 +342,12 @@ payBtn.addEventListener("click", () => {
   if (billpin.value === "1234") {
     let total = amountTotal - sendAmount;
     totalAmount.innerText = total;
+  } else if (billpin.value == "") {
+    alert("Please Give Pin Number");
+  } else {
+    alert("Wrong Information");
   }
+
   billAmo.value = "";
   billpin.value = "";
   billNum.value = "";
@@ -218,7 +358,7 @@ payBtn.addEventListener("click", () => {
 let tranPage = document.getElementById("tranPage");
 let transaction = document.getElementById("transaction");
 
-// Pay bill page show
+// Transaction page show
 tranPage.addEventListener("click", () => {
   welPart.setAttribute("hidden", true);
   defPart.setAttribute("hidden", true);
@@ -232,6 +372,24 @@ tranPage.addEventListener("click", () => {
   tranPage.style.border = "1px solid #0874F2";
   tranPage.style.color = "#0874F2";
   tranPage.style.background = "#f3f8fe";
-});
 
-// ===========================================
+  billPage.style.border = "";
+  billPage.style.color = "";
+  billPage.style.background = "";
+
+  cupon.style.border = "";
+  cupon.style.color = "";
+  cupon.style.background = "";
+
+  traMoneyPage.style.border = "";
+  traMoneyPage.style.color = "";
+  traMoneyPage.style.background = "";
+
+  cashOutPage.style.border = "";
+  cashOutPage.style.color = "";
+  cashOutPage.style.background = "";
+
+  addBtn.style.border = "";
+  addBtn.style.color = "";
+  addBtn.style.background = "";
+});
